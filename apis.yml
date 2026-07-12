@@ -28,6 +28,8 @@ apis:
     description: >-
       The Capri Holdings API provides access to platform services and data for enterprise integration and automation.
 common:
+  - type: DomainSecurity
+    url: security/capri-holdings-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/capri-holdings-limited
   - type: Website
