@@ -7,13 +7,13 @@ created: '2026-05-04'
 # Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
 # bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
 method: generated
-modified: '2026-05-05'
+modified: '2026-09-19'
 reconciled: false
 tags:
   - Retail
   - Luxury
   - Fashion
-description: Capri Holdings (parent of Versace, Jimmy Choo, and Michael Kors) does not publish a public
+description: Capri Holdings (parent of Michael Kors and Jimmy Choo; Versace was sold to Prada in 2025) does not publish a public
   developer portal or API pricing. Any partner integrations are negotiated bilaterally with each brand's
   digital/IT organization.
 notes: No public API or pricing page found. Capri Holdings does not operate a self-service developer
@@ -25,7 +25,7 @@ plans:
     name: Partner Integration
     type: enterprise
     description: Bilaterally negotiated partner access for retail/wholesale, omnichannel, e-commerce,
-      and supply-chain integrations across the Versace, Jimmy Choo, and Michael Kors brands.
+      and supply-chain integrations across the Michael Kors and Jimmy Choo brands.
     entries:
       - label: Partner agreement
         name: partner_agreement

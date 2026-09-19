@@ -7,12 +7,12 @@ deliveryModel:
   open_source: false
   commercial: false
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
+  label: No software product — luxury goods holding company with no API or developer program
   confidence: low
   source:
-  - none
-  generated: '2026-08-28'
-  method: derived
+    - none
+  generated: '2026-09-19'
+  method: probed
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -22,41 +22,89 @@ accessModel:
   label: Unknown
   confidence: low
   source:
-  - plans
-  generated: '2026-07-22'
-  method: derived
+    - probe
+  generated: '2026-09-19'
+  method: probed
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/capri-holdings.png
 tags:
   - Retail
   - Luxury
   - Fashion
+  - Apparel
+  - Footwear
+  - Accessories
+  - Holding Company
+  - No Developer Program
 description: >-
-  Capri Holdings is a major US corporation and Fortune 1000 company. The Capri Holdings API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+  Capri Holdings Limited (NYSE: CPRI) is a global luxury fashion group whose portfolio is the Michael
+  Kors and Jimmy Choo brands (Versace was sold to Prada in 2025 and no longer appears on the company's
+  overview). It designs, markets and sells apparel, footwear, handbags and accessories through its own
+  stores, wholesale partners, licensees and brand e-commerce sites. Capri Holdings publishes no developer
+  program: the corporate site at capriholdings.com is a Q4-hosted investor-relations property (news, SEC
+  filings, governance, ESG resources, careers) with no API, documentation, SDK, package, OpenAPI, GraphQL,
+  MCP or A2A surface, and the api.capriholdings.com and developer.capriholdings.com hosts an earlier scaffold
+  named do not resolve in DNS. Every /.well-known/* path answers with the IR platform's 'Invalid key'
+  catch-all rather than a document. This profile records that absence honestly; nothing has been authored
+  on the company's behalf.
 created: '2026-04-19'
-modified: '2026-04-19'
+modified: '2026-09-19'
 specificationVersion: '0.23'
-apis:
-  - aid: capri-holdings:capri-holdings-api
-    name: Capri Holdings API
-    tags:
-      - Retail
-      - Luxury
-      - Fashion
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.capriholdings.com
-    humanURL: https://developer.capriholdings.com
-    properties:
-      - url: https://developer.capriholdings.com/docs
-        type: Documentation
-    description: >-
-      The Capri Holdings API provides access to platform services and data for enterprise integration and automation.
+apis: []
 common:
-  - type: DomainSecurity
-    url: security/capri-holdings-domain-security.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/capri-holdings-limited
   - type: Website
     url: https://www.capriholdings.com
+  - type: About
+    url: https://www.capriholdings.com/overview/default.aspx
+  - type: InvestorRelations
+    url: https://www.capriholdings.com/
+  - type: Newsroom
+    url: https://www.capriholdings.com/news/default.aspx
+  - type: X-SECFilings
+    url: https://www.capriholdings.com/financials/sec-filings/default.aspx
+  - type: X-AnnualReports
+    url: https://www.capriholdings.com/financials/annual-reports/default.aspx
+  - type: Sustainability
+    url: https://www.capriholdings.com/impact/esg-resources/default.aspx
+  - type: Careers
+    url: https://www.capriholdings.com/people/Join-Us/default.aspx
+  - type: Contact
+    url: https://www.capriholdings.com/resources/investor-contacts/default.aspx
+  - type: X-Sitemap
+    url: https://www.capriholdings.com/site-map/default.aspx
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/capri-holdings-limited
+  - type: DomainSecurity
+    url: security/capri-holdings-domain-security.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-19'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Capri Holdings is a luxury goods holding company (Michael Kors, Jimmy Choo) whose only web property,
+    capriholdings.com, is a Q4-hosted investor-relations site with no developer, API or partner pages;
+    the scaffolded api.capriholdings.com and developer.capriholdings.com hosts return NXDOMAIN, /openapi.json
+    and /llms.txt 404, and every /.well-known/* path returns the platform's 11-byte 'Invalid key' catch-all (HTML pages answer 403 to curl behind a
+    Cloudflare challenge but render in a browser fetch, which confirmed the site map lists no developer page).
+  evidence:
+    - url: https://api.capriholdings.com/
+      status: 0
+    - url: https://developer.capriholdings.com/
+      status: 0
+    - url: https://www.capriholdings.com/openapi.json
+      status: 404
+    - url: https://www.capriholdings.com/llms.txt
+      status: 404
+    - url: https://www.capriholdings.com/.well-known/security.txt
+      status: 200
+    - url: https://www.capriholdings.com/.well-known/agent-card.json
+      status: 200
+    - url: https://www.capriholdings.com/site-map/default.aspx
+      status: 403
+  checked: '2026-09-19'

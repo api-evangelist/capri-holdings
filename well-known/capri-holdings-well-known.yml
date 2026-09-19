@@ -1,0 +1,89 @@
+generated: '2026-09-19'
+method: probed
+source: live GET of /.well-known/* on every host the record names (curl, browser User-Agent), 2026-09-19
+provider: Capri Holdings
+providerId: capri-holdings
+note: >-
+  No well-known document is served. Every /.well-known/* path on capriholdings.com and
+  www.capriholdings.com answers with the Q4 Inc. investor-relations platform's catch-all — an
+  11-byte text/plain body reading "Invalid key" (or a 301 to the same path with a trailing slash
+  that then returns the same body). A 200 carrying that body is not a document, so each is recorded
+  as a miss and NO WellKnown/SecurityTxt pointer is wired in apis.yml. The two API hosts the prior
+  scaffold named, api.capriholdings.com and developer.capriholdings.com, do not resolve in DNS
+  (NXDOMAIN), so no probe could run against them. The brand storefronts www.michaelkors.com and
+  www.jimmychoo.com (not hosts on this record) answer 403 Access Denied (Akamai) on
+  /.well-known/security.txt.
+hosts:
+  - host: www.capriholdings.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        note: 11-byte text/plain "Invalid key" platform catch-all — not a security.txt; treated as a miss
+      - path: /.well-known/openid-configuration
+        status: 301
+        file: null
+        note: 301 to trailing-slash path, which returns the same "Invalid key" body — miss
+      - path: /.well-known/oauth-authorization-server
+        status: 301
+        file: null
+        note: 301 to trailing-slash path, same catch-all body — miss
+      - path: /.well-known/oauth-protected-resource
+        status: 301
+        file: null
+        note: same Q4 catch-all pattern — miss
+      - path: /.well-known/api-catalog
+        status: 301
+        file: null
+        note: 301 to trailing-slash path, same catch-all body — miss
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        file: null
+        note: Q4 "Invalid key" catch-all, not JSON — miss
+      - path: /.well-known/agent-card.json
+        status: 200
+        file: null
+        note: Q4 "Invalid key" catch-all, not a JSON object — no A2A agent card
+      - path: /.well-known/agent.json
+        status: 200
+        file: null
+        note: Q4 "Invalid key" catch-all, not a JSON object — no legacy agent card
+      - path: /llms.txt
+        status: 404
+        file: null
+  - host: capriholdings.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        note: 11-byte "Invalid key" catch-all — miss
+      - path: /.well-known/openid-configuration
+        status: 301
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 301
+        file: null
+      - path: /.well-known/api-catalog
+        status: 301
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        file: null
+        note: Q4 "Invalid key" catch-all — miss
+      - path: /.well-known/agent-card.json
+        status: 200
+        file: null
+        note: Q4 "Invalid key" catch-all — miss
+      - path: /.well-known/agent.json
+        status: 200
+        file: null
+        note: Q4 "Invalid key" catch-all — miss
+      - path: /llms.txt
+        status: 404
+        file: null
+  - host: api.capriholdings.com
+    documents: []
+    note: DNS does not resolve (NXDOMAIN, 2026-09-19); host was a scaffold, never a real API host
+  - host: developer.capriholdings.com
+    documents: []
+    note: DNS does not resolve (NXDOMAIN, 2026-09-19); host was a scaffold, never a real developer portal
