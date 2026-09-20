@@ -2,21 +2,23 @@
 kin_checks:
   slug: capri-holdings
   schema_version: 0.22.0
-  scored_at: '2026-09-18'
-  run_ts: 2026-09-18T231945
+  scored_at: '2026-09-19'
+  run_ts: 2026-09-19T193153
   note: Actionable checks (missed + partial) in `checks`, plus the ids that did not
     apply in `na`. Everything else in rubric/scoring-0.22.0.yml was earned; counts
     below let you verify that.
   counts:
     total: 136
-    earned: 10
+    earned: 8
     partial: 3
-    missed: 79
+    missed: 81
     na: 44
   checks:
-  - id: tags_present
-    status: missed
   - id: multiple_apis
+    status: missed
+  - id: human_url_per_api
+    status: missed
+  - id: base_url_per_api
     status: missed
   - id: well_known_published
     status: missed
@@ -77,6 +79,8 @@ kin_checks:
   - id: examples_published
     status: missed
   - id: portal_present
+    status: missed
+  - id: documentation_present
     status: missed
   - id: api_reference_present
     status: missed
