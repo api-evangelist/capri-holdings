@@ -51,6 +51,12 @@ modified: '2026-09-19'
 specificationVersion: '0.23'
 apis: []
 common:
+  - type: Plans
+    url: plans/capri-holdings-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/capri-holdings-rate-limits.yml
+  - type: FinOps
+    url: finops/capri-holdings-finops.yml
   - type: Website
     url: https://www.capriholdings.com
   - type: About
