@@ -1,4 +1,4 @@
-# Capri Holdings (capri-holdings)
+# Capri Holdings
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,23 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Capri Holdings is a major US corporation and Fortune 1000 company. The Capri Holdings API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+Capri Holdings Limited (NYSE: CPRI) is a global luxury fashion group whose portfolio is the Michael Kors and Jimmy Choo brands (Versace was sold to Prada in 2025 and no longer appears on the company's overview). It designs, markets and sells apparel, footwear, handbags and accessories through its own stores, wholesale partners, licensees and brand e-commerce sites. Capri Holdings publishes no developer program: the corporate site at capriholdings.com is a Q4-hosted investor-relations property (news, SEC filings, governance, ESG resources, careers) with no API, documentation, SDK, package, OpenAPI, GraphQL, MCP or A2A surface, and the api.capriholdings.com and developer.capriholdings.com hosts an earlier scaffold named do not resolve in DNS. Every /.well-known/* path answers with the IR platform's 'Invalid key' catch-all rather than a document. This profile records that absence honestly; nothing has been authored on the company's behalf.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/capri-holdings/refs/heads/main/apis.yml)
+**Areas:** Retail · Luxury · Fashion · Apparel · Footwear · Accessories · Holding Company · No Developer Program
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Capri Holdings on APIs.io
 
-## Tags:
+Everything profiled for Capri Holdings is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/capri-holdings/](https://apis.io/providers/capri-holdings/)** — or go straight to one of the APIs or properties below.
 
- - Retail, Luxury, Fashion
+### Published properties
 
-## Timestamps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Created:** 2026-04-19
-- **Modified:** 2026-04-19
+#### Security (1)
 
-## Maintainers
+Authentication, trust centre, and vulnerability disclosure.
 
-**FN:** Kin Lane
+- [Capri Holdings Domain Security](https://apis.io/security/capri-holdings/capri-holdings-domain-security/)
 
-**Email:** kin@apievangelist.com
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Capri Holdings Plans Pricing](https://apis.io/plans/capri-holdings/capri-holdings-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Capri Holdings Rate Limits](https://apis.io/rate-limits/capri-holdings/capri-holdings-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Capri Holdings Finops](https://apis.io/finops/capri-holdings/capri-holdings-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.capriholdings.com)
+
+## API Evangelist rating
+
+**Kin Score 5.3** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 49.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 5.3 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/capri-holdings/](https://apis.io/providers/capri-holdings/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Capri Holdings: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/capri-holdings/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
